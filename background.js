@@ -23,12 +23,19 @@ function updateBlockingRules() {
       // ブロック機能が有効な場合のみ新しいルールを追加
       if (isEnabled && blockedSites.length > 0) {
         const rules = blockedSites.map((site, index) => {
-          // URLを正規化（httpやhttpsプロトコルを含む場合の処理）
-          let urlFilter = site;
-          if (!site.startsWith('http://') && !site.startsWith('https://')) {
-            urlFilter = '*://' + site + '/*';
+          // URLを正規化
+          let urlFilter;
+          if (site.startsWith('http://') || site.startsWith('https://')) {
+            // 完全URLの場合、ドメイン部分を抽出
+            try {
+              const url = new URL(site);
+              urlFilter = '*://' + url.hostname + '/*';
+            } catch (e) {
+              urlFilter = '*://' + site + '/*';
+            }
           } else {
-            urlFilter = site + '/*';
+            // ドメインのみの場合
+            urlFilter = '*://' + site + '/*';
           }
 
           return {
