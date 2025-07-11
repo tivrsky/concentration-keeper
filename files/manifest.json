@@ -30,5 +30,17 @@
         "<all_urls>"
       ]
     }
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://x.com/*",
+        "*://twitter.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
   ]
 }
