@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "サイトブロッカー",
-  "version": "1.1.0",
+  "name": "コンセントレーションキーパー",
+  "version": "1.0.0",
   "description": "指定したサイトへのアクセスをブロックします",
   "permissions": [
     "storage",
@@ -16,7 +16,7 @@
   },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "サイトブロッカー"
+    "default_title": "コンセントレーションキーパー"
   },
   "declarative_net_request": {
     "rule_resources": []
