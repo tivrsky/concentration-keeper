@@ -10,7 +10,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.13.1",
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=10 <11",
+    "npm": "please-use-pnpm",
+    "yarn": "please-use-pnpm"
+  },
   "devDependencies": {
     "@biomejs/biome": "^2.1.1"
   }
