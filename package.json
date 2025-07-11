@@ -1,0 +1,17 @@
+{
+  "name": "concentration-keeper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "check": "biome check files/",
+    "check:fix": "biome check --write files/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.13.1",
+  "devDependencies": {
+    "@biomejs/biome": "^2.1.1"
+  }
+}
